@@ -1,0 +1,48 @@
+body
+{
+	margin:0;
+	background:url(/css/images/background_overflow.jpg) repeat;
+	font-family: Trebuchet, Tahoma, Geneva, sans-serif;
+	color: #CCC;
+}
+.main_column_container {
+	background-image: url(/css/images/background.jpg);
+	background-position: top;
+	height: 100%;
+	background-repeat: no-repeat;
+}
+.construction_popup {
+	width:400px;
+	position:relative;
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
+	animation:construction 3s forwards;
+	-webkit-animation:construction 3s forwards;
+	-moz-animation:construction 3s forwards;
+	-o-animation:construction 3s forwards;
+}
+.construction_popup a{
+	text-decoration:none;
+	color:#999;
+}
+
+@keyframes construction{
+	from {top:-20px;}
+	to{top:50%;}
+}
+
+@-webkit-keyframes construction{
+	from {top:0px;}
+	to{top:50%;}
+}
+
+@-moz-keyframes construction{
+	from {top:-20px;}
+	to{top:50%;}
+}
+
+@-o-keyframes construction{
+	from {top:-20px;}
+	to {top:50%;}
+}
