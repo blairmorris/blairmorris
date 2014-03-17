@@ -6,7 +6,7 @@ exports.mail = function(req, res) {
         mail({
             from: req.body.name + "✔ <"+req.body.email+"/>", // sender address
             to: "edward@blairmorris.com", // list of receivers
-            subject: "Email from BlairMorris.com", // Subject line
+            subject: req.body.requestResume ? "Resume request" : "Email from BlairMorris.com", // Subject line
             text: req.body.message, // plaintext body
             html: "<b>"+req.body.message+"</b>" // html body
         }, function(error, response){

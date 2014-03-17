@@ -37,6 +37,7 @@
 </head>
 
 <body data-spy="scroll" data-offset="0" data-target="#gn-menu">
+<a href="https://github.com/blairmorris"><img style="position: absolute; top: 50px; right: 0; border: 0;" src="https://github-camo.global.ssl.fastly.net/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
 <!-- ========== MAIN MENU ========== -->
 <div class="container" ng-controller="MainController">
     <ul id="gn-menu" class="gn-menu-main">
@@ -205,7 +206,7 @@
                     <figure>
                         <img class="img-responsive" src="./img/portfolio/flappy_chris.png" alt="">
                         <figcaption>
-                            <h5>DASHBOARD</h5>
+                            <h5>FLAPPY CHRIS</h5>
                             <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Take a Look</a>
                         </figcaption><!-- /figcaption -->
                     </figure><!-- /figure -->
@@ -244,7 +245,7 @@
                     <figure>
                         <img class="img-responsive" src="./img/portfolio/fore_jay.jpg" alt="">
                         <figcaption>
-                            <h5>UI DESIGN</h5>
+                            <h5>FORE JAY</h5>
                             <a data-toggle="modal" href="#myModal2" class="btn btn-primary btn-lg">Take a Look</a>
                         </figcaption><!-- /figcaption -->
                     </figure><!-- /figure -->
@@ -277,7 +278,7 @@
                     <figure>
                         <img class="img-responsive" src="./img/portfolio/tastebud.png" alt="">
                         <figcaption>
-                            <h5>ANDROID PAGE</h5>
+                            <h5>TASTEBUD</h5>
                             <a data-toggle="modal" href="#myModal3" class="btn btn-primary btn-lg">Take a Look</a>
                         </figcaption><!-- /figcaption -->
                     </figure><!-- /figure -->
@@ -478,22 +479,27 @@
 
             <div class="col-lg-7">
                 <h3>Drop Me A Line</h3>
-                <br>
                 <form role="form">
                     <div class="form-group">
-                        <label>Your Name</label>
-                        <input type="name" class="form-control" ng-model="contact.name" id="name1" placeholder="Your Name">
+                        <!--<label>Your Name</label>-->
+                        <input type="name" class="form-control" ng-model="contact.name" id="name1" placeholder="Name">
                     </div>
                     <div class="form-group">
-                        <label>Email address</label>
-                        <input type="email" class="form-control" ng-model="contact.email" placeholder="Enter email">
+                        <!--<label>Email address</label>-->
+                        <input type="email" class="form-control" ng-model="contact.email" placeholder="Email">
                     </div>
                     <div class="form-group">
-                        <label>Your Text</label>
-                        <textarea class="form-control" ng-model="contact.message" rows="3"></textarea>
+                        <!--<label>Your Text</label>-->
+                        <textarea class="form-control" ng-model="contact.message" rows="3" placeholder="Message"></textarea>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" ng-model="contact.requestResume"> I would love a copy of your resume!
+                        </label>
                     </div>
                     <br>
-                    <button type="button" ng-click="sendMail()" class="btn-large btn-theme">Send</button>
+                    <alert ng-repeat="alert in alerts.contact" type="alert.type" close="closeAlert($index, 'contact')">{{alert.msg}}</alert>
+                    <button type="button" ng-click="sendMail(contact)" class="btn-large btn-theme">Send</button>
                 </form>
             </div>
         </div>
@@ -504,6 +510,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/ui-bootstrap-tpls.js"></script>
     <script src="js/classie.js"></script>
     <script src="js/smoothscroll.js"></script>
     <script src="js/gnmenu.js"></script>
