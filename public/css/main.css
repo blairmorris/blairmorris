@@ -92,7 +92,7 @@ a:after {
    ========================================================================== */
 
 #headerwrap {
-	background: url(../../../../Downloads/FS2%20Theme/Flat%20&%20Scroll%202%20Theme/freelance/assets/img/header-bg.jpg) no-repeat center top;
+	background: url(../img/header-bg.jpg) no-repeat center top;
 	margin-top: -10px;
 	padding-top:120px;
 	text-align:center;
@@ -119,13 +119,13 @@ a:after {
 }
 
 #foliowrap {
-	background: url(../../../../Downloads/FS2%20Theme/Flat%20&%20Scroll%202%20Theme/freelance/assets/img/foliowrap.jpg) no-repeat center top;
+	background: url(../img/foliowrap.jpg) no-repeat center top;
 	margin-top: 30px;
 	padding-top:50px;
 	text-align:center;
 	background-attachment: relative;
 	background-position: center center;
-	min-height: 800px;
+	min-height: 500px;
 	width: 100%;
 	
     -webkit-background-size: 100%;
@@ -146,7 +146,7 @@ a:after {
 }
 
 #testimonial {
-	background: url(../../../../Downloads/FS2%20Theme/Flat%20&%20Scroll%202%20Theme/freelance/assets/img/mint.jpg) no-repeat center top;
+	background: url(../img/mint.jpg) no-repeat center top;
 	margin-top: 80px;
 	padding-top:80px;
 	text-align:center;
@@ -338,7 +338,7 @@ a:after {
    ========================================================================== */
 
 .accordion-heading {
-	margin-top: : 30px;
+	margin-top: 30px;
 	padding-bottom: 10px;
 	text-align: left;
 	border-bottom: 1px solid #ccc;
@@ -392,7 +392,7 @@ a:after {
 }
 
 .form-group label {
-	font-family: 'Raleway'; sans-serif;
+	font-family: 'Raleway', sans-serif;
 	font-size: 16px;
 	font-weight: 300;
 }

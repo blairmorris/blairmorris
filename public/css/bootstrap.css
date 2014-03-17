@@ -2385,8 +2385,8 @@ input[type="button"].btn-block {
 
 @font-face {
   font-family: 'Glyphicons Halflings';
-  src: url('../../../../Downloads/FS2%20Theme/Flat%20&%20Scroll%202%20Theme/freelance/assets/fonts/glyphicons-halflings-regular.eot');
-  src: url('../../../../Downloads/FS2%20Theme/Flat%20&%20Scroll%202%20Theme/freelance/assets/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../../../../Downloads/FS2%20Theme/Flat%20&%20Scroll%202%20Theme/freelance/assets/fonts/glyphicons-halflings-regular.woff') format('woff'), url('../../../../Downloads/FS2%20Theme/Flat%20&%20Scroll%202%20Theme/freelance/assets/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../../../../Downloads/FS2%20Theme/Flat%20&%20Scroll%202%20Theme/freelance/assets/fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+  src: url('/fonts/glyphicons-halflings-regular.eot');
+  src: url('/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('/fonts/glyphicons-halflings-regular.woff') format('woff'), url('/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('/fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
 }
 
 .glyphicon {

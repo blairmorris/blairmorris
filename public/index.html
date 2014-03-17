@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html ng-app="mainApp" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+
+    <title>Blair Morris, Javascript Addict</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./css/main.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="./css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="./css/component.css">
+
+    <script src="js/angular.min.js"></script>
+    <script src="./app/main.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/Chart.js"></script>
+    <script src="./js/modernizr.custom.js"></script>
+
+
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body data-spy="scroll" data-offset="0" data-target="#gn-menu">
+<!-- ========== MAIN MENU ========== -->
+<div class="container" ng-controller="MainController">
+    <ul id="gn-menu" class="gn-menu-main">
+        <li class="gn-trigger">
+            <a class="gn-icon gn-icon-menu"><span>Menu</span></a>
+            <nav class="gn-menu-wrapper">
+                <div class="gn-scroller">
+                    <ul class="gn-menu">
+                        <li class="gn-search-item">
+                            <input placeholder="Search" type="search" class="gn-search">
+                            <a class="gn-icon gn-icon-search"><span>Search</span></a>
+                        </li>
+                        <li><a href="#home" class="gn-icon gn-icon-home smoothScroll">Home</a></li>
+                        <li><a href="#about" class="gn-icon gn-icon-archive smoothScroll">About</a></li>
+                        <li><a href="#portfolio" class="gn-icon gn-icon-pictures smoothScroll">Portfolio</a></li>
+                        <li><a href="#blog" class="gn-icon gn-icon-article smoothScroll">Blog</a></li>
+                        <li><a href="#contact" class="gn-icon gn-icon-envelop smoothScroll">Contact</a></li>
+                    </ul>
+                </div><!-- /gn-scroller -->
+            </nav>
+        </li>
+        <li><a href="#home" class="smoothScroll">BlairMorris.com</a></li>
+    </ul>
+</div><!-- /container -->
+
+
+<!-- ========== HEADER SECTION ========== -->
+<section id="home" name="home"></section>
+<div id="headerwrap">
+    <div class="container">
+        <div class="col-lg-8">
+            <h1>I'm a full-stack Javascript developer living in Raleigh, NC.</h1>
+        </div>
+        <div class="col-lg-4">
+        </div>
+    </div><!-- /container -->
+</div><!-- /headerwrap -->
+
+
+<!-- ABOUT SECTION -->
+<section id="about" name="about"></section>
+<div class="container about">
+    <div class="col-lg-6 col-lg-offset-3">
+        <h3>About Blair Morris</h3>
+        <h5>FULL-STACK JAVASCRIPT DEVELOPER</h5>
+        <hr>
+        <div class="row">
+            <div class=" well col-lg-10 col-lg-offset-1">
+                <h4>tech·no·phile</h4>
+                <h6 class="text-left">/'teknəˌfīl/</h6>
+                <h6 class="text-left">1. An inborn obcession with bleeding-edge technology and reminding people in which century they reside.</h6>
+            </div>
+        </div>
+        <p>My entire career has focused on designing and developing for the web. I specialize in UI development using javascript as my number one tool. I'm also skilled in front-end design, server-side javascript, and everything in between.</p>
+    </div><!-- /col-lg-6 -->
+</div><!-- /container -->
+
+
+<!-- BEGIN CHART SECTION -->
+<div id="chartwrap">
+    <br>
+    <br>
+    <div class="container centered">
+        <!-- FIRST CHART -->
+        <div class="col-lg-2 col-lg-offset-2">
+            <canvas id="canvas" height="130" width="130"></canvas>
+            <label>AngularJS</label>
+            <br>
+            <script>
+                var doughnutData = [
+                    {
+                        value: 90,
+                        color:"#1abc9c"
+                    },
+                    {
+                        value : 10,
+                        color : "#ecf0f1"
+                    }
+                ];
+                var myDoughnut = new Chart(document.getElementById("canvas").getContext("2d")).Doughnut(doughnutData);
+            </script>
+            <br>
+            <br>
+        </div><!-- col-lg-2 -->
+
+
+        <!-- SECOND CHART -->
+        <div class="col-lg-2">
+            <canvas id="canvas1" height="130" width="130"></canvas>
+            <label>NodeJS</label>
+            <br>
+            <script>
+                var doughnutData = [
+                    {
+                        value: 75,
+                        color:"#1abc9c"
+                    },
+                    {
+                        value : 25,
+                        color : "#ecf0f1"
+                    }
+                ];
+                var myDoughnut = new Chart(document.getElementById("canvas1").getContext("2d")).Doughnut(doughnutData);
+            </script>
+            <br>
+            <br>
+        </div><!-- col-lg-2 -->
+
+
+        <!-- THIRD CHART -->
+        <div class="col-lg-2">
+            <canvas id="canvas2" height="130" width="130"></canvas>
+            <label>Bootstrap</label>
+            <script>
+                var doughnutData = [
+                    {
+                        value: 90,
+                        color:"#1abc9c"
+                    },
+                    {
+                        value : 10,
+                        color : "#ecf0f1"
+                    }
+                ];
+                var myDoughnut = new Chart(document.getElementById("canvas2").getContext("2d")).Doughnut(doughnutData);
+            </script>
+            <br>
+            <br>
+        </div><!-- col-lg-2 -->
+
+        <div class="col-lg-2">
+            <canvas id="canvas3" height="130" width="130"></canvas>
+            <label>MongoDB</label>
+            <script>
+                var doughnutData = [
+                    {
+                        value: 50,
+                        color:"#1abc9c"
+                    },
+                    {
+                        value : 50,
+                        color : "#ecf0f1"
+                    }
+                ];
+                var myDoughnut = new Chart(document.getElementById("canvas3").getContext("2d")).Doughnut(doughnutData);
+            </script>
+            <br>
+            <br>
+        </div><!-- col-lg-2 -->
+
+        <div class="col-lg-2"></div>
+    </div><!-- container -->
+</div><!-- chartwrap -->
+
+<section id="portfolio" name="portfolio"></section>
+<div id="foliowrap">
+    <div class="container">
+        <h3>I Create Cool Stuff</h3>
+        <br>
+        <br>
+        <div class="row">
+
+            <!-- PORTFOLIO IMAGE 1 -->
+            <div class="col-md-4 ">
+                <div class="grid mask">
+                    <figure>
+                        <img class="img-responsive" src="./img/portfolio/flappy_chris.png" alt="">
+                        <figcaption>
+                            <h5>DASHBOARD</h5>
+                            <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Take a Look</a>
+                        </figcaption><!-- /figcaption -->
+                    </figure><!-- /figure -->
+                </div><!-- /grid-mask -->
+                <br>
+            </div><!-- /col -->
+
+
+            <!-- MODAL SHOW THE PORTFOLIO IMAGE. In this demo, all links point to this modal. You should create
+                 a modal for each of your projects. -->
+
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title">Flappy Chris</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p><img class="img-responsive" src="./img/portfolio/flappy_chris.png" alt=""></p>
+                            <p>This fun little app was originally forked from a Flappy Bird clone done with a game development javascript library called Phaser.</p>
+                            <p>If it's not apparent, Chris is a coworker and a good friend, he was perfectly happy to provide images and sounds for the game.</p>
+                            <p><b><a href="flappychris.blairmorris.com">Visit Site</a></b></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+
+
+            <!-- PORTFOLIO IMAGE 2 -->
+            <div class="col-md-4">
+                <div class="grid mask">
+                    <figure>
+                        <img class="img-responsive" src="./img/portfolio/fore_jay.jpg" alt="">
+                        <figcaption>
+                            <h5>UI DESIGN</h5>
+                            <a data-toggle="modal" href="#myModal2" class="btn btn-primary btn-lg">Take a Look</a>
+                        </figcaption><!-- /figcaption -->
+                    </figure><!-- /figure -->
+                </div><!-- /grid-mask -->
+                <br>
+            </div><!-- /col -->
+            <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title">Play <i>Fore</i> Jay</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p><img class="img-responsive" src="./img/portfolio/fore_jay.jpg" alt=""></p>
+                            <p>This was an extremely quick project whipped up to help sign-up and collect donations for a Golf Fundraiser for a friend with Leukemia.</p>
+                            <p>I would like to go back and redo it a million ways, but I only had a few days to put it together before the event.</p>
+                            <p><b><a href="http://www.forejay.com">Visit Site</a></b></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+
+            <!-- PORTFOLIO IMAGE 3 -->
+            <div class="col-md-4">
+                <div class="grid mask">
+                    <figure>
+                        <img class="img-responsive" src="./img/portfolio/tastebud.png" alt="">
+                        <figcaption>
+                            <h5>ANDROID PAGE</h5>
+                            <a data-toggle="modal" href="#myModal3" class="btn btn-primary btn-lg">Take a Look</a>
+                        </figcaption><!-- /figcaption -->
+                    </figure><!-- /figure -->
+                </div><!-- /grid-mask -->
+                <br>
+            </div><!-- /col -->
+            <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title">TasteBud</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p><img class="img-responsive" src="./img/portfolio/tastebud.png" alt=""></p>
+                            <p>This is a placeholder for my newest creation, in collaboration with <a href="http://www.pintlabs.com">Pint Labs' BreweryDB</a>, an app that recommends craft beer via your individual taste preferences.</p>
+                            <p><b><a href="#">This Project is Pending</a></b></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+        </div><!-- /row -->
+
+        <!--&lt;!&ndash; PORTFOLIO IMAGE 4 &ndash;&gt;-->
+        <!--<div class="row">-->
+            <!--<div class="col-md-4 ">-->
+                <!--<div class="grid mask">-->
+                    <!--<figure>-->
+                        <!--<img class="img-responsive" src="./img/portfolio/folio04.jpg" alt="">-->
+                        <!--<figcaption>-->
+                            <!--<h5>PROFILE</h5>-->
+                            <!--<a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Take a Look</a>-->
+                        <!--</figcaption>&lt;!&ndash; /figcaption &ndash;&gt;-->
+                    <!--</figure>&lt;!&ndash; /figure &ndash;&gt;-->
+                <!--</div>&lt;!&ndash; /grid-mask &ndash;&gt;-->
+                <!--<br>-->
+            <!--</div>&lt;!&ndash; /col &ndash;&gt;-->
+
+            <!--&lt;!&ndash; PORTFOLIO IMAGE 5 &ndash;&gt;-->
+            <!--<div class="col-md-4">-->
+                <!--<div class="grid mask">-->
+                    <!--<figure>-->
+                        <!--<img class="img-responsive" src="./img/portfolio/folio05.jpg" alt="">-->
+                        <!--<figcaption>-->
+                            <!--<h5>TWITTER STATUS</h5>-->
+                            <!--<a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Take a Look</a>-->
+                        <!--</figcaption>&lt;!&ndash; /figcaption &ndash;&gt;-->
+                    <!--</figure>&lt;!&ndash; /figure &ndash;&gt;-->
+                <!--</div>&lt;!&ndash; /grid-mask &ndash;&gt;-->
+                <!--<br>-->
+            <!--</div>&lt;!&ndash; /col &ndash;&gt;-->
+
+            <!--&lt;!&ndash; PORTFOLIO IMAGE 6 &ndash;&gt;-->
+            <!--<div class="col-md-4">-->
+                <!--<div class="grid mask">-->
+                    <!--<figure>-->
+                        <!--<img class="img-responsive" src="./img/portfolio/folio06.jpg" alt="">-->
+                        <!--<figcaption>-->
+                            <!--<h5>PHONE MOCKUP</h5>-->
+                            <!--<a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Take a Look</a>-->
+                        <!--</figcaption>&lt;!&ndash; /figcaption &ndash;&gt;-->
+                    <!--</figure>&lt;!&ndash; /figure &ndash;&gt;-->
+                <!--</div>&lt;!&ndash; /grid-mask &ndash;&gt;-->
+            <!--</div>&lt;!&ndash; /col &ndash;&gt;-->
+            <!--<br>-->
+        <!--</div>&lt;!&ndash; /row &ndash;&gt;-->
+    </div><!-- /container -->
+</div><!-- /foliowrap -->
+
+
+<section id="blog" name="blog"></section>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3"></div>
+        <div class="col-lg-6 about">
+            <a href="http://eblairmorris.wordpress.com">
+                <h3>Sometimes I Blog</h3>
+                <h5>The Increasingly Poor Decisions of Blair Morris</h5>
+            </a>
+            <br>
+
+            <!-- ACCORDION -->
+            <div class="accordion" id="accordion2">
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                            <date>Mar 01, 2014</date> <plus> + </plus> O Brave New World
+                        </a>
+                    </div><!-- /accordion-heading -->
+                    <div id="collapseOne" class="accordion-body collapse in">
+                        <br>
+                        <div class="accordion-inner">
+                            <h4>You win, Social Media. </h4>
+                            <p>As much as I try to avoid it, the benefits of having a blog on development for the sake of portfolio content, sharing with friends, and keeping myself motivated to keep learning more (and not having those lessons disappear into the void) I’m finally creating a blog to link from my website (blairmorris.com)</p>
+                            <p>I’m currently mulling over the idea of 1 new javascript library a week, be it an entire framework or a small helper library. Either way, more to come.</p>
+                            <p><img class="img-circle" src="./img/avatar.jpg" height="50px" width="50px"> - <i>Blair Morris.</i></p>
+                        </div><!-- /accordion-inner -->
+                    </div><!-- /collapse -->
+                </div><!-- /accordion-group -->
+                <!--<br>-->
+
+                <!--<div class="accordion-group">-->
+                    <!--<div class="accordion-heading">-->
+                        <!--<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">-->
+                            <!--<date>Sep 10, 2013</date> <plus> + </plus>  Retina Ready Theme-->
+                        <!--</a>-->
+                    <!--</div>-->
+                    <!--<div id="collapseTwo" class="accordion-body collapse">-->
+                        <!--<div class="accordion-inner">-->
+                            <!--<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>-->
+                        <!--</div>&lt;!&ndash; /accordion-inner &ndash;&gt;-->
+                    <!--</div>&lt;!&ndash; /collapse &ndash;&gt;-->
+                <!--</div>&lt;!&ndash; /accordion-group &ndash;&gt;-->
+                <!--<br>-->
+
+                <!--<div class="accordion-group">-->
+                    <!--<div class="accordion-heading">-->
+                        <!--<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">-->
+                            <!--<date>Aug 22, 2013</date> <plus> + </plus>  Awesome Support-->
+                        <!--</a>-->
+                    <!--</div>-->
+                    <!--<div id="collapseThree" class="accordion-body collapse">-->
+                        <!--<div class="accordion-inner">-->
+                            <!--<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>-->
+                        <!--</div>&lt;!&ndash; /accordion-inner &ndash;&gt;-->
+                    <!--</div>&lt;!&ndash; /collapse &ndash;&gt;-->
+                <!--</div>&lt;!&ndash; /accordion-group &ndash;&gt;-->
+                <!--<br>-->
+
+                <!--<div class="accordion-group">-->
+                    <!--<div class="accordion-heading">-->
+                        <!--<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">-->
+                            <!--<date>Aug 13, 2013</date> <plus> + </plus>  Responsive Design-->
+                        <!--</a>-->
+                    <!--</div>-->
+                    <!--<div id="collapseFour" class="accordion-body collapse">-->
+                        <!--<div class="accordion-inner">-->
+                            <!--<p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>-->
+                        <!--</div>&lt;!&ndash; /accordion-inner &ndash;&gt;-->
+                    <!--</div>&lt;!&ndash; /collapse &ndash;&gt;-->
+                <!--</div>&lt;!&ndash; /accordion-group &ndash;&gt;-->
+                <!--<br>-->
+            </div><!-- Accordion -->
+        </div><!-- /col-lg-6 -->
+
+        <div class="col-lg-3"></div>
+    </div><!-- /row -->
+</div><!-- /container -->
+
+<div id="testimonial">
+    <div class="container" ng-controller="MainController">
+        <div class="bs-example">
+            <div id="carousel-example-generic" class="carousel slide bs-docs-carousel-example">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <h1>Most good programmers do programming not because they expect to get paid or get adulation by the public, but because it is fun to program.</h1>
+                        <br>
+                        <h2>Linus Torvalds</h2>
+                    </div>
+                    <div class="item">
+                        <h1>Nine people can’t make a baby in a month. (regarding the addition of more programmers to get a project completed faster)</h1>
+                        <br>
+                        <h2>Fred Brooks (American computer scientist, winner of the 1999 Turing Award)</h2>
+                    </div>
+                    <div class="item">
+                        <h1>Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live.</h1>
+                        <br>
+                        <h2>Martin Golding</h2>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <section id="contact" name="contact"></section>
+    <div id="footerwrap">
+        <div class="container" ng-controller="MainController">
+            <div class="col-lg-5">
+                <h3>Address</h3>
+                <p>
+                    Cary,<br/>
+                    North Carolina,<br/>
+                    27513<br/>
+                    United States
+                </p>
+            </div>
+
+            <div class="col-lg-7">
+                <h3>Drop Me A Line</h3>
+                <br>
+                <form role="form">
+                    <div class="form-group">
+                        <label>Your Name</label>
+                        <input type="name" class="form-control" ng-model="contact.name" id="name1" placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label>Email address</label>
+                        <input type="email" class="form-control" ng-model="contact.email" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label>Your Text</label>
+                        <textarea class="form-control" ng-model="contact.message" rows="3"></textarea>
+                    </div>
+                    <br>
+                    <button type="button" ng-click="sendMail()" class="btn-large btn-theme">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/gnmenu.js"></script>
+    <script>
+        new gnMenu( document.getElementById( 'gn-menu' ) );
+    </script>
+    <script>
+        $('.carousel').carousel({
+            interval: 5500
+        })
+    </script>
+</div>
+
+</body>
+</html>
