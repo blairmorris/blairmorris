@@ -6,8 +6,8 @@
     "start": "node app.js"
   },
   "dependencies": {
-    "express": "*",
-    "grunt": "*",
+    "express": "^3.21.2",
+    "grunt": "^1.6.1",
     "nodemailer": "~0.6.1"
   }
 }
